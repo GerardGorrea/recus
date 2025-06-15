@@ -1,0 +1,366 @@
+/* NAVBAR */
+nav{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(var(--dark-bg), 1); 
+    color: white;
+    box-shadow: 0 2px 8px #444;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-bottom: 50px; */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .logoMenu{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    gap: 40px;
+    height: 75px;
+  }
+
+  nav a{
+    padding: 10px 15px 10px 15px;
+  }
+
+  .logo{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    gap: 40px;
+    height: 75px;
+  }
+  
+  /* MENU */
+  .llistaMenu{
+    list-style: none;
+    display: flex;
+    padding: 0px;
+  }
+  
+  .menuDropdown{
+    list-style: none;
+    padding-left: 0px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--dark);
+    border: 1px solid rgba(var(--dark-bg), 1);
+    padding: 0.5rem 0;
+    z-index: 1;
+  
+    /* poso que cada 8 files en la columna es posi lo demes en unaltre columna */
+    grid-template-columns: repeat(2, max-content);
+  }
+  
+  .menuDropdown a{
+    display: block;
+    color: white;
+    padding: 10px 15px 10px 15px;
+  }
+
+  .menuDropdown a:hover{
+    color: white;
+    background-color: rgb(69, 69, 69);
+  }
+
+  li{
+    padding: 0px;
+  }
+  
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .dropdown {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /* Mostrar el submenú en passar el ratolí */
+  .dropdown:hover .menuDropdown {
+    display: grid;
+  }
+  
+  /* perfil */
+  .perfil{
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px 15px 8px 15px;
+    border-radius: 15px;
+    box-shadow: 1px 2px 3px #444;
+    gap: 10px;
+  }
+
+  .fotoUser{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: white;
+  }
+
+  .fotoUser img{
+    height: 110%;
+  }
+
+  /* perfil hover */
+/* Dropdown del perfil d'usuari */
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.user-info:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.user-info p {
+    margin: 0;
+    font-weight: 500;
+    color: white;
+}
+
+.fotoUser {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Menu dropdown */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 160px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    margin-top: 5px;
+}
+
+.user-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    border-radius: 0;
+}
+
+.dropdown-item:first-child {
+    border-radius: 8px 8px 0 0;
+}
+
+.dropdown-item:last-child {
+    border-radius: 0 0 8px 8px;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+.dropdown-item.logout:hover {
+    background-color: #fee;
+    color: #dc3545;
+}
+
+.dropdown-item i {
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        right: -10px;
+        min-width: 140px;
+    }
+    
+    .dropdown-item {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .user-info p {
+        font-size: 14px;
+    }
+    
+    .fotoUser {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+  
+/* FOOTER */
+
+footer{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 0px 100px 0px;
+    margin-top: 100px;
+    width:100%;
+  }
+  
+  .menuFooter{
+    border-right: 2px solid white;
+    padding-right: 2%;
+  }
+  
+  .menuFooter h3{
+    color: white;
+    margin-bottom: 25px;
+  }
+  
+  .menuFooter ul{
+    list-style: none;
+    padding: 0px;
+  }
+  
+  .menuFooter li{
+    color: white;
+    padding: 7px 10px 7px 10px;
+  }
+  
+  .menuFooter a{
+    text-decoration: none;
+  }
+  
+  .formulariFoter{
+    width: 400px;
+  }
+  
+  .formulariFoter h3{
+    color: white;
+  }
+  
+  .formulariFoter label{
+    color: white;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .formulariFoter input, .formulariFoter textarea{
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .formulariFoter textarea{
+    height: 100px;
+  }
+  
+  .contacteFooter{
+    border-left: 2px solid white;
+    padding-left: 2%;
+  }
+  
+  .contacteFooter h3{
+    color: white;
+  }
+  
+  .divContacte{
+    height: 175px;
+    width: 175px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  
+  .contacte{
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .contacte img{
+    width: 50px;
+  }
+
+  .pokebuilder_logo{
+    color:white;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer_span{
+    display: flex; 
+    align-items: center;
+  }
+
+  .footer_span img{
+    height: 1em;
+    vertical-align: middle;
+    margin: 0 0.1em;
+  }
+
+
+@media (min-width: 769px) {
+  /* Estils per a escriptoris */
+    footer {
+    flex-direction: row;
+    padding: 100px 50px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Estils per a tauletes i mòbils grans */
+    footer {
+    flex-direction: column;
+    padding: 80px 30px;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Estils per a mòbils petits */
+    footer {
+    flex-direction: column;
+    padding: 50px 20px;
+    gap: 2rem;
+  }
+}
+
+  

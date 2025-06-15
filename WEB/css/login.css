@@ -1,0 +1,124 @@
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Fons amb imatge */
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../IMG/eevee-night-pokemon-4k-wallpaper-uhdpaper.com-99@2@a.jpg') no-repeat center center;
+    background-size: cover;
+    transform: scaleX(-1);
+    z-index: 0;
+  }
+  
+  /* Capa vermella en diagonal */
+  .overlay-red {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    padding-right: 12%;
+    background-color: rgba(var(--normal-rgb), 0.85);
+    animation: rotacioColors 60s infinite linear;
+  }
+  
+  /* Login */
+  main {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: calc(100% - 60px);
+    padding: 40px;
+  }
+  
+  .login-box {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  
+  .login-box h2 {
+    margin-bottom: 20px;
+  }
+  
+  .login-box label {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.15em;
+  }
+  
+  .login-box input {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+  }
+  
+  .login-box button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #87b9f9;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .login-box button:hover {
+    background-color: #6eaaf5;
+  }
+  
+
+
+
+  @keyframes rotacioColors {
+    0%   { background-color: rgba(var(--normal-rgb), 0.85); }
+    7%   { background-color: rgba(var(--planta-rgb), 0.85); }
+    14%  { background-color: rgba(var(--fuego-rgb), 0.85); }
+    21%  { background-color: rgba(var(--agua-rgb), 0.85); }
+    28%  { background-color: rgba(var(--lucha-rgb), 0.85); }
+    35%  { background-color: rgba(var(--bicho-rgb), 0.85); }
+    42%  { background-color: rgba(var(--veneno-rgb), 0.85); }
+    49%  { background-color: rgba(var(--psiquico-rgb), 0.85); }
+    56%  { background-color: rgba(var(--fantasma-rgb), 0.85); }
+    63%  { background-color: rgba(var(--electrico-rgb), 0.85); }
+    70%  { background-color: rgba(var(--hielo-rgb), 0.85); }
+    77%  { background-color: rgba(var(--dragon-rgb), 0.85); }
+    84%  { background-color: rgba(var(--roca-rgb), 0.85); }
+    91%  { background-color: rgba(var(--tierra-rgb), 0.85); }
+    100% { background-color: rgba(var(--volador-rgb), 0.85); }
+  }
+  

@@ -1,0 +1,313 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* BODY */
+header h1{
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Tomorrow';
+  margin-top: 100px;
+}
+
+h2{
+  font-family: 'Tomorrow';
+  font-size: 1.8rem;
+}
+
+h3{
+  font-family: 'Tomorrow';
+  font-size: 1.3rem;
+}
+
+/* FONS */ 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+  background: linear-gradient(
+    135deg,
+    #242424 25%,
+    #2b2b2b 25%,
+    #2b2b2b 50%,
+    #242424 50%,
+    #242424 75%,
+    #2b2b2b 75%,
+    #2b2b2b
+  );
+  background-size: 40px 40px;
+
+  animation: move 30s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 500px 500px;
+  }
+}
+
+.cont_blanc{
+  background-color:white;
+  border-radius: 10px;
+  max-width: 1400px;
+  width: 100%;
+  padding-bottom: 100px;
+  margin-top: 100px;
+}
+
+.divBuscador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.buscador {
+  width: 600px;
+  padding: 15px 50px 15px 20px;
+  border: none;
+  border-radius: 50px;
+  background-color: #D9D9D9;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+  outline: none;
+}
+
+.lupa {
+  position: absolute;
+  right: calc(50% - 300px + 20px);
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+}
+
+.posts{
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+.post{
+  margin: 100px;
+  background-color: var(--electrico);
+  width: 700px;
+  padding: 25px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#post1{
+  margin-left: 0;
+  margin-right: auto;
+}
+
+#post2{
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.titolPost{
+  display: flex;
+  justify-content: space-between;
+}
+
+.UserPost{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.UserPost img {
+  width: 60px;
+  border-radius: 50px;
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.equipDescripcioPost{
+  display: flex;
+  gap: 20px;
+}
+
+.equipPost{
+  width: 100%;
+  min-width: 364px;
+  border: 3px solid white;
+  background-color: #444;
+  border-radius: 30px;
+  padding: 35px 25px;
+}
+
+.titolEquipDetalls{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titolEquipDetalls h3{
+  color: white;
+}
+
+.titolEquipDetalls a{
+  padding: 15px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: black;
+}
+
+.equipUserPost{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  justify-content: center;
+  gap: 10px;
+}
+
+.pokemonsPost{
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.descripcioPost{
+  width: 325px;
+}
+
+.descripcioPost p{
+  line-height: 1.3;
+}
+
+.divButons{
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+}
+
+.compartir, .like, .descarrega{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+#openModalButton {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  font-size: 5rem;
+  color: var(--electrico);
+  cursor: pointer;
+  z-index: 9999;
+  transition: transform 0.2s ease;
+}
+
+#openModalButton:hover {
+  transform: scale(1.5);
+}
+
+/* Fons del modal (transparent negre) */
+/* Estil bàsic del fons del modal */
+.modal {
+  display: none; /* Amagat per defecte */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Fons difuminat */
+}
+
+/* Contingut del modal */
+.modal-content {
+  background-color: #ffffff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animació d'entrada */
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+/* Tanca (la X) */
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #333;
+}
+
+/* Títol */
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+/* Inputs i selects */
+.modal-content input[type="text"],
+.modal-content select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.modal-content input[type="text"]:focus,
+.modal-content select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Botó d'enviar */
+.modal-content button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.modal-content button[type="submit"]:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,230 @@
+html, body{
+  margin: 0px;
+  padding: 0px;
+}
+
+/* body */
+/* FONS */ 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+  background: linear-gradient(
+    135deg,
+    #242424 25%,
+    #2b2b2b 25%,
+    #2b2b2b 50%,
+    #242424 50%,
+    #242424 75%,
+    #2b2b2b 75%,
+    #2b2b2b
+  );
+  background-size: 40px 40px;
+
+  animation: move 30s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 500px 500px;
+  }
+}
+
+.cont_blanc{
+  background-color: white;
+  border-radius: 10px;
+  max-width: 1400px;
+  width: 100%;
+  margin-top: 100px;
+  padding-bottom: 100px;
+}
+
+section{
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+/* CONTINGUT */
+h1{
+  text-align: center;
+  margin-top: 75px;
+  font-family: 'Tomorrow';
+  font-size: 2.5rem;
+}
+.divBuscador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 50px;
+}
+
+.buscador {
+  width: 600px;
+  padding: 15px 50px 15px 20px;
+  border: none;
+  border-radius: 50px;
+  background-color: #D9D9D9;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+  outline: none;
+}
+
+.lupa {
+  position: absolute;
+  right: calc(50% - 300px + 20px);
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+}
+
+.divFiltro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 100px auto 0px auto;
+}
+
+.filtro {
+  width: 150px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.filtroActiu {
+  position: relative;
+  width: 150px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  color: #282828;
+  overflow: hidden;
+}
+
+.filtroActiu::before {
+  content: "✔";
+  position: absolute;
+  font-size: 40px;
+  color: #585858;
+  z-index: 0;
+}
+
+.filtro p {
+  margin: 0px;
+  font-weight: bold;
+  font-size: 16px;
+  z-index: 1;
+}
+
+#filtroNormal{ 
+  background-color: var(--normal); 
+}
+#filtroPlanta{ 
+  background-color: var(--planta); 
+}
+#filtroFuego{ 
+  background-color: var(--fuego); 
+}
+#filtroAgua{ 
+  background-color: var(--agua); 
+}
+#filtroLucha{ 
+  background-color: var(--lucha); 
+}
+#filtroBicho{ 
+  background-color: var(--bicho); 
+}
+#filtroVeneno{ 
+  background-color: var(--veneno); 
+}
+#filtroPsiquico{ 
+  background-color: var(--psiquico); 
+}
+#filtroFantasma{ 
+  background-color: var(--fantasma); 
+}
+#filtroElectrico{ 
+  background-color: var(--electrico); 
+}
+#filtroHielo{ 
+  background-color: var(--hielo); 
+}
+#filtroDragon{ 
+  background-color: var(--dragon); 
+}
+#filtroRoca{ 
+  background-color: var(--roca); 
+}
+#filtroTierra{ 
+  background-color: var(--tierra); 
+}
+#filtroVolador{ 
+  background-color: var(--volador); 
+}
+
+.pokedex{
+  display: grid;
+  grid-template-columns: repeat(4, 200px); /* 4 columnes de 400px cadascuna */
+  gap: 50px; /* espai entre caixes */
+  justify-content: center; /* centrat horitzontalment */
+  margin: 150px auto 0px auto;
+}
+
+.divPkmn{
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 0px 4px 4px #00000025;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.divPkmn:hover {
+  box-shadow: 0px 14px 14px #00000025;
+  background-color: #ededed; /* fons més fosc */
+  transform: translateY(-10px);
+}
+
+.divPkmn p{
+  color: black;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.divPkmn:hover p {
+  opacity: 1;
+}
+
+.paginacio{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 75px;
+}
+
+.paginacio a{
+  border: 1px solid black;
+  border-radius: 10px;
+  color: black;
+  padding: 10px 20px;
+}

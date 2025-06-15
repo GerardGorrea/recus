@@ -1,0 +1,121 @@
+html, body{
+  margin: 0px;
+  padding: 0px;
+}
+
+/* FONS */ 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+  background: linear-gradient(
+    135deg,
+    #242424 25%,
+    #2b2b2b 25%,
+    #2b2b2b 50%,
+    #242424 50%,
+    #242424 75%,
+    #2b2b2b 75%,
+    #2b2b2b
+  );
+  background-size: 40px 40px;
+
+  animation: move 30s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 500px 500px;
+  }
+}
+
+.cont_blanc{
+  background-color: white;
+  border-radius: 10px;
+  max-width: 1400px;
+  width: 100%;
+  padding: 100px 0px;
+  margin-top: 100px;
+}
+
+/* BODY */
+header, section{
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+.generalHeader{
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+.generalHeader h1{
+  font-size: 2.5em;
+}
+
+.tarifes{
+  display: flex;
+  justify-content: space-between;
+}
+
+.gratis, .premium, .premiumPlus{
+  width: 250px;
+  background-color: var(--planta);
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  padding-bottom: 80px;
+  position: relative;
+}
+
+.gratis button, .premium button, .premiumPlus button{
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+  padding: 10px 100px;
+  box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.generalSection{
+  background-color: var(--planta);
+  max-width: 1200px;
+  margin: 0px auto;
+  margin-top: 100px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.generalSection_bg{
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px 50px 0px;
+  box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  /* box-shadow: 0 0 10px rgba(0,0,0,0.2); */
+}
+
+th, td {
+  padding: 15px;
+  border: 1px solid #ccc;
+}

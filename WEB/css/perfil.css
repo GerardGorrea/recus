@@ -1,0 +1,264 @@
+html, body{
+  margin: 0px;
+  padding: 0px;
+}
+
+/* FONS */ 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+  background: linear-gradient(
+    135deg,
+    #242424 25%,
+    #2b2b2b 25%,
+    #2b2b2b 50%,
+    #242424 50%,
+    #242424 75%,
+    #2b2b2b 75%,
+    #2b2b2b
+  );
+  background-size: 40px 40px;
+
+  animation: move 30s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 500px 500px;
+  }
+}
+
+.cont_blanc{
+  background-color:white;
+  border-radius: 10px;
+  max-width: 1400px;
+  width: 100%;
+  padding: 100px 0px;
+  margin-top: 100px;
+}
+
+/* body */
+h1{
+  font-size: 2.5em;
+  font-family: 'Tomorrow';
+}
+
+h2{
+  font-size: 1.8em;
+  font-family: 'Tomorrow';
+}
+
+h3{
+  font-size: 1.3em;
+  font-family: 'Tomorrow';
+}
+
+p, textarea{
+  font-family: 'Roboto Mono';
+}
+
+.estruct{
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+}
+
+.dadesPrincipal{
+  /* background-color: salmon; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.centrar{
+  /* background-color: green; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+#fotoPerfil{
+  background-color: white;
+  border-radius: 100%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.dadesPrincipal h2{
+  text-align: center;
+}
+
+.totalLike{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#descripcioUser{
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.equipsCreats{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.caixa{
+  min-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px 0px 10px 0px;
+  color: white;
+  padding: 10px 30px 10px 30px;
+  border: 2px solid white;
+  border-radius: 15px;
+  background-color: rgba(68, 68, 68, 0.85);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.nomMiniMenu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.miniMenu{
+  cursor: pointer;
+}
+
+.menuOpcionsContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.menuOpcions {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 2px 0;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.menuOpcions p {
+  margin: 0;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.menuOpcions p:hover {
+  background-color: #eee;
+  transition: all 0.3s;
+}
+
+.menuOpcionsContainer:hover .menuOpcions {
+  display: block;
+}
+
+.equip{
+  display: flex;
+  justify-content: space-around;
+}
+
+.equipPokemon{
+  background-color: white;
+  border-radius: 15px;
+}
+
+.totalLikeEquip{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+}
+
+.afegirCaixa{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px 0px 10px 0px;
+  color: white;
+  width: 300px;
+  height: 100px;
+  border: 2px solid white;
+  border-radius: 15px;
+  background-color: rgba(68, 68, 68, 0.85);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.tancar-modal {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.galeria-imatges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.img-opcio {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+
+.img-opcio:hover {
+  border: 2px solid #888;
+}
+
+.img-opcio.seleccionada {
+  border: 2px solid #4CAF50;
+}
